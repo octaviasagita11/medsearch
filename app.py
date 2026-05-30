@@ -35,6 +35,7 @@ html, body, [class*="css"] { font-family: 'Lato', sans-serif; }
     border-right: 1px solid #2a221a !important;
 }
 [data-testid="stSidebar"] * { color: #D4C5A9 !important; }
+[data-testid="stSidebar"] .stButton > button { color: #2a2a2a !important; }
 
 /* ---- HERO ---- */
 .hero-title {
