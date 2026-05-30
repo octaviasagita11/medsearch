@@ -422,7 +422,7 @@ with st.sidebar:
     for nama, icon in menu_items:
         is_active = st.session_state['halaman'] == nama
         bg     = "background:rgba(201,169,110,0.08);border:1px solid rgba(201,169,110,0.15);" if is_active else "border:1px solid transparent;"
-        color  = "color:#c9a96e  !important;" if is_active else "color:#2a2a2a !important;"
+        color  = "color:#c9a96e  !important;" if is_active else "color:#1a1a1a !important;"
         if st.button(f"{icon}  {nama}", key=f"nav_{nama}", use_container_width=True):
             st.session_state['halaman'] = nama
             st.rerun()
