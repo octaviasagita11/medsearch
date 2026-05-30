@@ -231,14 +231,14 @@ def load_model():
     import pandas as pd
     TFIDF_norm      = scipy.sparse.load_npz('model_deploy/tfidf_matrix.npz')
     IDF_vector      = np.load('model_deploy/idf_vector.npy')
-    vocabulary      = pickle.load(open('model_deploy/vocabulary.pkl', 'rb'))
-    term2idx        = pickle.load(open('model_deploy/term2idx.pkl', 'rb'))
-    bigram_index    = pickle.load(open('model_deploy/bigram_index.pkl', 'rb'))
-    term_bigrams    = pickle.load(open('model_deploy/term_bigrams.pkl', 'rb'))
-    permuterm_index = pickle.load(open('model_deploy/permuterm_index.pkl', 'rb'))
-    stopword_list   = pickle.load(open('model_deploy/stopword_list.pkl', 'rb'))
-    kata_dikenal    = pickle.load(open('model_deploy/whitelist.pkl', 'rb'))
-    documents       = pd.read_pickle('model_deploy/dataset.pkl')
+    vocabulary      = pickle.load(open('vocabulary.pkl', 'rb'))
+    term2idx        = pickle.load(open('term2idx.pkl', 'rb'))
+    bigram_index    = pickle.load(open('bigram_index.pkl', 'rb'))
+    term_bigrams    = pickle.load(open('term_bigrams.pkl', 'rb'))
+    permuterm_index = pickle.load(open('permuterm_index.pkl', 'rb'))
+    stopword_list   = pickle.load(open('stopword_list.pkl', 'rb'))
+    kata_dikenal    = pickle.load(open('whitelist.pkl', 'rb'))
+    documents       = pd.read_pickle('dataset.pkl')
     stemmer         = StemmerFactory().create_stemmer()
     return (TFIDF_norm, IDF_vector, vocabulary, term2idx,
             bigram_index, term_bigrams, permuterm_index,
