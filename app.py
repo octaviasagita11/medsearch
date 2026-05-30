@@ -229,8 +229,8 @@ hr { border-color: #1e1812 !important; }
 @st.cache_resource(show_spinner="Memuat model...")
 def load_model():
     import pandas as pd
-    TFIDF_norm      = scipy.sparse.load_npz('model_deploy/tfidf_matrix.npz')
-    IDF_vector      = np.load('model_deploy/idf_vector.npy')
+    TFIDF_norm      = scipy.sparse.load_npz('tfidf_matrix.npz')
+    IDF_vector      = np.load('idf_vector.npy')
     vocabulary      = pickle.load(open('vocabulary.pkl', 'rb'))
     term2idx        = pickle.load(open('term2idx.pkl', 'rb'))
     bigram_index    = pickle.load(open('bigram_index.pkl', 'rb'))
