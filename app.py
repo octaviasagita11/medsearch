@@ -34,8 +34,9 @@ html, body, [class*="css"] { font-family: 'Lato', sans-serif; }
     background: #13100d !important;
     border-right: 1px solid #2a221a !important;
 }
-[data-testid="stSidebar"] * { color: #D4C5A9 !important; }
-[data-testid="stSidebar"] .stButton > button { color: #2a2a2a !important; }
+[data-testid="stSidebar"] * { color: #a89880 !important; }
+[data-testid="stSidebar"] button[kind="secondary"] { color: #000000 !important; }
+[data-testid="stSidebar"] button p { color: #000000 !important; }
 
 /* ---- HERO ---- */
 .hero-title {
