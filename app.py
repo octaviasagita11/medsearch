@@ -34,7 +34,7 @@ html, body, [class*="css"] { font-family: 'Lato', sans-serif; }
     background: #13100d !important;
     border-right: 1px solid #2a221a !important;
 }
-[data-testid="stSidebar"] * { color: #a89880 !important; }
+[data-testid="stSidebar"] * { color: #D4C5A9 !important; }
 
 /* ---- HERO ---- */
 .hero-title {
@@ -48,7 +48,7 @@ html, body, [class*="css"] { font-family: 'Lato', sans-serif; }
 }
 .hero-sub {
     font-size: 0.88rem;
-    color: #5a4e40;
+    color: #E0D5C5;
     margin-top: 8px;
     font-weight: 300;
     letter-spacing: 0.08em;
@@ -76,7 +76,7 @@ html, body, [class*="css"] { font-family: 'Lato', sans-serif; }
     border-color: #c9a96e !important;
     box-shadow: 0 0 0 3px rgba(201,169,110,0.1) !important;
 }
-.stTextInput > div > div > input::placeholder { color: #3a3028 !important; }
+.stTextInput > div > div > input::placeholder { color: #A89880 !important; }
 
 /* ---- BUTTON ---- */
 .stButton > button {
@@ -128,11 +128,11 @@ html, body, [class*="css"] { font-family: 'Lato', sans-serif; }
     left: 0; top: 0; bottom: 0; width: 2px;
     background: linear-gradient(180deg, #c9a96e, #8a6a3a);
 }
-.doc-rank { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: #2a2218; font-style: italic; }
+.doc-rank { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: #C9A96E; font-style: italic; }
 .doc-id   { font-size: 0.68rem; color: #c9a96e; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
 .doc-sim  { font-size: 0.78rem; color: #4a3e30; }
 .doc-sim span { color: #c9a96e; font-weight: 700; }
-.doc-snippet  { font-size: 0.87rem; color: #7a6e5e; line-height: 1.7; margin-top: 6px; }
+.doc-snippet  { font-size: 0.87rem; color: #F0EBE3; line-height: 1.7; margin-top: 6px; }
 
 /* ---- METRIC CARD ---- */
 .metric-card {
@@ -144,7 +144,7 @@ html, body, [class*="css"] { font-family: 'Lato', sans-serif; }
     margin-bottom: 0.5rem;
 }
 .metric-val { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: #c9a96e; }
-.metric-lbl { font-size: 0.68rem; color: #3a3028; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 3px; }
+.metric-lbl { font-size: 0.68rem; color: #D4C5A9; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 3px; }
 
 /* ---- ABOUT CARD ---- */
 .about-card {
@@ -161,7 +161,7 @@ html, body, [class*="css"] { font-family: 'Lato', sans-serif; }
     margin-bottom: 0.8rem;
     letter-spacing: 0.01em;
 }
-.about-body { font-size: 0.85rem; color: #5a4e40; line-height: 1.8; }
+.about-body { font-size: 0.85rem; color: #E0D5C5; line-height: 1.8; }
 .about-body code {
     background: #0a0804;
     color: #c9a96e;
@@ -180,7 +180,7 @@ html, body, [class*="css"] { font-family: 'Lato', sans-serif; }
     font-size: 0.68rem; font-weight: 700;
     border: 1px solid rgba(201,169,110,0.2);
 }
-.step-text { font-size: 0.85rem; color: #6a5e4e; line-height: 1.65; }
+.step-text { font-size: 0.85rem; color: #E0D5C5; line-height: 1.65; }
 
 /* ---- STATISTIK ---- */
 .stat-row {
@@ -405,14 +405,14 @@ with st.sidebar:
                     color:#e8ddc8;letter-spacing:0.01em">
             Med<span style="color:#c9a96e">Search</span>
         </div>
-        <div style="font-size:0.62rem;color:#2a2218;margin-top:4px;
+        <div style="font-size:0.62rem;color:#D4C5A9;margin-top:4px;
                     letter-spacing:0.12em;text-transform:uppercase">
             Tolerant Retrieval System
         </div>
     </div>
     """, unsafe_allow_html=True)
 
-    st.markdown("<div style='font-size:0.62rem;color:#2a2218;letter-spacing:0.1em;text-transform:uppercase;padding:14px 4px 8px'>Navigasi</div>", unsafe_allow_html=True)
+    st.markdown("<div style='font-size:0.62rem;color:#D4C5A9;letter-spacing:0.1em;text-transform:uppercase;padding:14px 4px 8px'>Navigasi</div>", unsafe_allow_html=True)
 
     menu_items = [
         ("Beranda",         "○"),
@@ -422,7 +422,7 @@ with st.sidebar:
     for nama, icon in menu_items:
         is_active = st.session_state['halaman'] == nama
         bg     = "background:rgba(201,169,110,0.08);border:1px solid rgba(201,169,110,0.15);" if is_active else "border:1px solid transparent;"
-        color  = "color:#c9a96e !important;" if is_active else "color:#4a3e30 !important;"
+        color  = "color:#c9a96e !important;" if is_active else "color:#D4C5A9 !important;"
         if st.button(f"{icon}  {nama}", key=f"nav_{nama}", use_container_width=True):
             st.session_state['halaman'] = nama
             st.rerun()
@@ -432,20 +432,20 @@ with st.sidebar:
         st.markdown(f"""
         <div style="margin-top:1.5rem;padding:1rem;background:#0a0804;
                     border:1px solid #1e1812;border-radius:6px">
-            <div style="font-size:0.62rem;color:#2a2218;letter-spacing:0.1em;
+            <div style="font-size:0.62rem;color:#D4C5A9;letter-spacing:0.1em;
                         text-transform:uppercase;margin-bottom:10px">Sesi ini</div>
             <div style="display:flex;justify-content:space-between;margin-bottom:6px">
-                <span style="font-size:0.78rem;color:#3a3028">Pencarian</span>
+                <span style="font-size:0.78rem;color:#D4C5A9">Pencarian</span>
                 <span style="font-family:'Playfair Display',serif;color:#c9a96e">
                     {st.session_state['total_searches']}</span>
             </div>
             <div style="display:flex;justify-content:space-between;margin-bottom:6px">
-                <span style="font-size:0.78rem;color:#3a3028">Typo dikoreksi</span>
+                <span style="font-size:0.78rem;color:#D4C5A9">Typo dikoreksi</span>
                 <span style="font-family:'Playfair Display',serif;color:#c9a96e">
                     {st.session_state['total_typo']}</span>
             </div>
             <div style="display:flex;justify-content:space-between">
-                <span style="font-size:0.78rem;color:#3a3028">Dokumen ditemukan</span>
+                <span style="font-size:0.78rem;color:#D4C5A9">Dokumen ditemukan</span>
                 <span style="font-family:'Playfair Display',serif;color:#c9a96e">
                     {st.session_state['total_docs']}</span>
             </div>
@@ -520,7 +520,7 @@ if st.session_state['halaman'] == 'Beranda':
                         <div style="font-size:1rem;color:#e8ddc8;margin:6px 0 3px;
                                     font-family:'Playfair Display',serif;font-style:italic">
                             {l['token']}</div>
-                        <div style="font-size:0.7rem;color:#3a3420">
+                        <div style="font-size:0.7rem;color:#A89880">
                             {', '.join(l['ekspansi'][:4])}{'...' if len(l['ekspansi'])>4 else ''}
                         </div>
                     </div>""", unsafe_allow_html=True)
@@ -567,7 +567,7 @@ if st.session_state['halaman'] == 'Beranda':
                     </div>""", unsafe_allow_html=True)
 
             st.markdown("<br>", unsafe_allow_html=True)
-            st.markdown(f"#### Hasil &nbsp;<span style='font-size:0.82rem;color:#2a2218;font-weight:400;font-family:Lato'>— {len(hasil)} dokumen</span>", unsafe_allow_html=True)
+            st.markdown(f"#### Hasil &nbsp;<span style='font-size:0.82rem;color:#A89880;font-weight:400;font-family:Lato'>— {len(hasil)} dokumen</span>", unsafe_allow_html=True)
 
             for doc in hasil:
                 snippet = doc['content'][:350].strip()
@@ -605,18 +605,18 @@ if st.session_state['halaman'] == 'Beranda':
             <div style="background:#13100d;border:1px dashed #1e1812;border-radius:8px;
                         padding:3rem;text-align:center;margin-top:1rem">
                 <div style="font-family:'Playfair Display',serif;font-size:1.1rem;
-                            color:#2a2218;font-style:italic;margin-bottom:6px">
+                            color:#A89880;font-style:italic;margin-bottom:6px">
                     Tidak ada dokumen relevan ditemukan</div>
-                <div style="color:#2a2218;font-size:0.85rem">Coba kata lain.</div>
+                <div style="color:#A89880;font-size:0.85rem">Coba kata lain.</div>
             </div>""", unsafe_allow_html=True)
     else:
         st.markdown("""
         <div style="background:#13100d;border:1px dashed #1e1812;border-radius:8px;
                     padding:3.5rem 2rem;text-align:center;margin-top:1rem">
             <div style="font-family:'Playfair Display',serif;font-size:1.3rem;
-                        color:#2a2218;font-style:italic;margin-bottom:8px">
+                        color:#A89880;font-style:italic;margin-bottom:8px">
                 Mulai pencarian</div>
-            <div style="color:#2a2218;font-size:0.88rem;line-height:1.8">
+            <div style="color:#A89880;font-size:0.88rem;line-height:1.8">
                 Ketik query di atas — boleh kata dasar, berimbuhan, atau dengan typo.<br>
                 Sistem akan mengoreksi dan menemukan dokumen yang relevan secara otomatis.
             </div>
@@ -822,7 +822,7 @@ elif st.session_state['halaman'] == 'Tentang Sistem':
             st.markdown(f"""
             <div style="display:flex;justify-content:space-between;align-items:center;
                         padding:8px 0;border-bottom:1px solid #1a1510">
-                <span style="font-size:0.82rem;color:#3a3028">{lbl}</span>
+                <span style="font-size:0.82rem;color:#D4C5A9">{lbl}</span>
                 <span style="font-family:'Playfair Display',serif;
                              font-size:1rem;color:{color}">{val}</span>
             </div>""", unsafe_allow_html=True)
